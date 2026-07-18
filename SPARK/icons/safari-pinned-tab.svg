@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Monochrome firefly silhouette for Safari pinned tabs (color set via the mask-icon "color" attribute) -->
+  <g fill="#000000">
+    <ellipse cx="256" cy="322" rx="64" ry="78"/>
+    <ellipse cx="256" cy="220" rx="46" ry="52"/>
+    <circle cx="256" cy="158" r="34"/>
+    <ellipse cx="196" cy="226" rx="26" ry="66" transform="rotate(24 196 226)"/>
+    <ellipse cx="316" cy="226" rx="26" ry="66" transform="rotate(-24 316 226)"/>
+    <path d="M240 132 Q226 104 204 96" stroke="#000" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M272 132 Q286 104 308 96" stroke="#000" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <circle cx="130" cy="422" r="12"/>
+    <circle cx="96" cy="380" r="9"/>
+  </g>
+</svg>

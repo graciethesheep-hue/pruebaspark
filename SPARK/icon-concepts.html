@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spark — Icon Concepts</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #FAF7F2; color: #3A3A38; margin: 0; padding: 32px; }
+  h1 { font-size: 1.4rem; }
+  p.note { color: #8A867F; max-width: 640px; }
+  .concepts { display: flex; gap: 48px; flex-wrap: wrap; margin-top: 28px; }
+  .concept { text-align: center; }
+  .concept h2 { font-size: 1.05rem; margin: 14px 0 4px; }
+  .concept p { color: #8A867F; font-size: 0.9rem; max-width: 260px; margin: 0 auto; }
+  .sizes { display: flex; align-items: flex-end; gap: 14px; justify-content: center; }
+  svg { border-radius: 22.5%; box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+  .small svg { border-radius: 22.5%; }
+</style>
+</head>
+<body>
+<h1>Spark app icon — two concepts</h1>
+<p class="note">Shown at home-screen size (180px) and small size (48px) to judge legibility. Pick one and the full icon set (192/512 PWA, 180 Apple touch, favicons, pinned-tab mask) will be generated from it.</p>
+
+<div class="concepts">
+
+  <div class="concept">
+    <div class="sizes">
+      <!-- Concept A: kernel-mid-pop -->
+      <svg width="180" height="180" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <rect width="512" height="512" fill="#6366F1"/>
+        <!-- pop burst -->
+        <g fill="#FAF7F2">
+          <circle cx="256" cy="208" r="86"/>
+          <circle cx="182" cy="244" r="58"/>
+          <circle cx="330" cy="244" r="58"/>
+          <circle cx="214" cy="164" r="52"/>
+          <circle cx="300" cy="164" r="52"/>
+        </g>
+        <!-- kernel below -->
+        <path d="M256 462c-52 0-84-30-84-72 0-46 40-84 84-84s84 38 84 84c0 42-32 72-84 72z" fill="#D4B483"/>
+        <path d="M256 322c-14 22-22 44-22 68 0 28 8 50 22 66 14-16 22-38 22-66 0-24-8-46-22-68z" fill="#B8934F" opacity="0.55"/>
+        <!-- spark lines -->
+        <g stroke="#FBB94F" stroke-width="18" stroke-linecap="round">
+          <line x1="112" y1="120" x2="88" y2="88"/>
+          <line x1="400" y1="120" x2="424" y2="88"/>
+          <line x1="256" y1="84" x2="256" y2="46"/>
+        </g>
+      </svg>
+      <span class="small">
+      <svg width="48" height="48" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <rect width="512" height="512" fill="#6366F1"/>
+        <g fill="#FAF7F2"><circle cx="256" cy="208" r="86"/><circle cx="182" cy="244" r="58"/><circle cx="330" cy="244" r="58"/><circle cx="214" cy="164" r="52"/><circle cx="300" cy="164" r="52"/></g>
+        <path d="M256 462c-52 0-84-30-84-72 0-46 40-84 84-84s84 38 84 84c0 42-32 72-84 72z" fill="#D4B483"/>
+        <g stroke="#FBB94F" stroke-width="18" stroke-linecap="round"><line x1="112" y1="120" x2="88" y2="88"/><line x1="400" y1="120" x2="424" y2="88"/><line x1="256" y1="84" x2="256" y2="46"/></g>
+      </svg>
+      </span>
+    </div>
+    <h2>A — Kernel mid-pop</h2>
+    <p>A popcorn kernel caught the instant it pops: the moment of starting. Indigo brand background, cream burst, gold kernel.</p>
+  </div>
+
+  <div class="concept">
+    <div class="sizes">
+      <!-- Concept B: firefly -->
+      <svg width="180" height="180" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <rect width="512" height="512" fill="#312E81"/>
+        <!-- glow -->
+        <circle cx="256" cy="300" r="150" fill="#FBB94F" opacity="0.18"/>
+        <circle cx="256" cy="300" r="100" fill="#FBB94F" opacity="0.28"/>
+        <!-- glowing abdomen -->
+        <ellipse cx="256" cy="322" rx="64" ry="78" fill="#FBB94F"/>
+        <!-- body + head -->
+        <ellipse cx="256" cy="220" rx="46" ry="52" fill="#4548C9"/>
+        <circle cx="256" cy="158" r="34" fill="#4548C9"/>
+        <!-- wings -->
+        <ellipse cx="196" cy="226" rx="26" ry="66" fill="#A5B4FC" opacity="0.85" transform="rotate(24 196 226)"/>
+        <ellipse cx="316" cy="226" rx="26" ry="66" fill="#A5B4FC" opacity="0.85" transform="rotate(-24 316 226)"/>
+        <!-- antennae -->
+        <g stroke="#A5B4FC" stroke-width="10" stroke-linecap="round" fill="none">
+          <path d="M240 132 Q226 104 204 96"/>
+          <path d="M272 132 Q286 104 308 96"/>
+        </g>
+        <!-- flight trail -->
+        <g fill="#FBB94F">
+          <circle cx="130" cy="422" r="10" opacity="0.9"/>
+          <circle cx="96" cy="380" r="7" opacity="0.6"/>
+          <circle cx="82" cy="330" r="5" opacity="0.35"/>
+        </g>
+      </svg>
+      <span class="small">
+      <svg width="48" height="48" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <rect width="512" height="512" fill="#312E81"/>
+        <circle cx="256" cy="300" r="150" fill="#FBB94F" opacity="0.18"/>
+        <ellipse cx="256" cy="322" rx="64" ry="78" fill="#FBB94F"/>
+        <ellipse cx="256" cy="220" rx="46" ry="52" fill="#4548C9"/>
+        <circle cx="256" cy="158" r="34" fill="#4548C9"/>
+        <ellipse cx="196" cy="226" rx="26" ry="66" fill="#A5B4FC" opacity="0.85" transform="rotate(24 196 226)"/>
+        <ellipse cx="316" cy="226" rx="26" ry="66" fill="#A5B4FC" opacity="0.85" transform="rotate(-24 316 226)"/>
+      </svg>
+      </span>
+    </div>
+    <h2>B — Firefly</h2>
+    <p>A firefly lighting up in the dark: a small, gentle glow that shows up anyway. Deep indigo night, gold glow.</p>
+  </div>
+
+</div>
+</body>
+</html>
