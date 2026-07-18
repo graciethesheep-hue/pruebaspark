@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF7F2" id="theme-color-meta">
+  <meta name="description" content="Spark — a gentle 'just start' tool that breaks tasks into tiny timed steps.">
+  <title>Spark — Just Start</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Spark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <button class="header-btn" id="back-btn" aria-label="Go back" hidden>&larr;</button>
+    <div class="brand" id="brand">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span class="brand-name">Spark</span>
+    </div>
+    <button class="header-btn" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+  </header>
+
+  <main id="app">
+
+    <!-- HOME -->
+    <section class="screen" id="screen-home" data-screen="home">
+      <div class="streak-banner" id="streak-banner">
+        <span class="streak-label">Tasks Started Today</span>
+        <span class="streak-count"><span id="streak-num">0</span> 🔥</span>
+      </div>
+
+      <h1 class="screen-title">What do you want to start?</h1>
+      <p class="screen-subtitle">Pick a category. We'll break it into tiny steps.</p>
+
+      <div class="category-grid" id="category-grid">
+        <!-- populated by app.js -->
+      </div>
+
+      <button class="stuck-btn" id="stuck-btn">
+        😵‍💫 I'm stuck — give me one tiny thing
+      </button>
+    </section>
+
+    <!-- CATEGORY -->
+    <section class="screen" id="screen-category" data-screen="category" hidden>
+      <h1 class="screen-title" id="category-title">Category</h1>
+      <div class="task-list" id="task-list">
+        <!-- populated by app.js -->
+      </div>
+    </section>
+
+    <!-- TASK DETAIL -->
+    <section class="screen" id="screen-task" data-screen="task" hidden>
+      <h1 class="screen-title task-title" id="task-title">Task</h1>
+
+      <div class="progress-wrap" aria-label="Task progress">
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        <span class="progress-text" id="progress-text">Step 1 of 5</span>
+      </div>
+
+      <div class="step-card">
+        <p class="step-text" id="step-text">Step text goes here.</p>
+
+        <div class="timer-ring-wrap" id="timer-ring-wrap">
+          <svg class="timer-ring" viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="ring-track" cx="100" cy="100" r="88"/>
+            <circle class="ring-progress" id="ring-progress" cx="100" cy="100" r="88"/>
+          </svg>
+          <div class="timer-readout">
+            <div class="timer-time" id="timer-display">
+              <input class="time-input" id="min-input" type="text" inputmode="numeric" maxlength="2" value="1" aria-label="Minutes"><span class="time-colon">:</span><input class="time-input" id="sec-input" type="text" inputmode="numeric" maxlength="2" value="00" aria-label="Seconds">
+            </div>
+            <span class="timer-hint" id="timer-hint">tap time to edit</span>
+          </div>
+        </div>
+
+        <div class="timer-controls">
+          <button class="timer-adjust" id="minus-btn" aria-label="Subtract 30 seconds">−30s</button>
+          <button class="timer-start" id="start-btn">Start</button>
+          <button class="timer-adjust" id="plus-btn" aria-label="Add 30 seconds">+30s</button>
+        </div>
+        <button class="timer-reset" id="reset-btn">↺ Reset timer</button>
+
+        <p class="motivation" id="step-motivation">"Starting is the hardest part."</p>
+      </div>
+
+      <div class="step-nav">
+        <button class="btn-secondary" id="skip-btn">Skip step</button>
+        <button class="btn-primary" id="next-btn">Next step →</button>
+      </div>
+
+      <p class="timer-note">💡 For best results, keep Spark open while your timer runs.</p>
+    </section>
+
+    <!-- TASK COMPLETE -->
+    <section class="screen" id="screen-done" data-screen="done" hidden>
+      <div class="done-card">
+        <div class="done-emoji" aria-hidden="true">🎉</div>
+        <h1 class="screen-title">You did it!</h1>
+        <p class="screen-subtitle">You finished every step. That was real.</p>
+        <button class="btn-primary" id="done-home-btn">Back home</button>
+      </div>
+    </section>
+
+    <!-- STUCK -->
+    <section class="screen" id="screen-stuck" data-screen="stuck" hidden>
+      <div class="stuck-card">
+        <p class="stuck-eyebrow">One tiny thing. Nothing more.</p>
+        <p class="stuck-phrase" id="stuck-phrase">Loading…</p>
+        <button class="btn-secondary" id="reroll-btn">🎲 Give me a different one</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/tasks.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
