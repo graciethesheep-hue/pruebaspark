@@ -7,7 +7,7 @@ A free, static, installable PWA that helps ADHD users beat task-initiation paral
 - ✅ **Session 1** — App shell, 4 screens (Home / Category / Task Detail / Stuck), navigation, light + dark theming, manifest + basic cache-first service worker
 - ✅ **Session 2** — Timer system: radial ring countdown, editable time (±30s buttons + direct mm:ss entry), start/pause/reset, drift-corrected timestamp-based ticking, in-tab 3× WebAudio alarm + vibration
 - ✅ **Session 3** — Wake Lock while a timer runs, notification permission on first timer start, system notification on step completion (fires while backgrounded), locked-screen limitation documented
-- ⬜ Session 4 — Confetti, full 24-task library, streak persistence polish
+- ✅ **Session 4** — Confetti completion celebration, full task library (all tasks from the blueprint), full stuck-phrase pool, notification prompt asked only once ever
 - ⬜ Session 5 — PWA icons + installability pass
 - ⬜ Session 6 — Polish/bugfix
 
@@ -33,6 +33,6 @@ Notification permission is requested the first time you start a timer (never on 
 
 ## Notes
 
-- Task data lives in `js/tasks.js`; currently a seed subset (one task per category). Full 24-task library lands in Session 4.
+- Task data lives in `js/tasks.js` — the full library from the blueprint (the blueprint says "24 tasks" but its §7 list contains 23; all 23 are included verbatim).
 - Streak counter counts tasks **started**, not completed — deliberate product decision.
 - Icons in `manifest.json` are referenced but not yet generated (Session 5).

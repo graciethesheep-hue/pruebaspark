@@ -8,7 +8,7 @@
 // backgrounded-but-alive tab → notification fires; fully suspended/locked →
 // best effort only. This is an OS restriction on all browsers, not a bug.
 
-const CACHE_NAME = 'spark-shell-v3';
+const CACHE_NAME = 'spark-shell-v4';
 const SHELL = [
   './',
   './index.html',
